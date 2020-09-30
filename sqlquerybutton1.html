@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Stamp</title>
+</head>
+<body>
+    <h1>Time Stamp</h1>
+    <form action="/dbtimeinsert.php" method="POST">
+    <!--  button - Log Timer -->
+    <timer>
+        <input id="logtime_button" name = "logtime_button" type="button" value="Log Timer" onclick="setLogTime()" />
+        <input type="text" id="logtime" name="log_time" value="" />
+        <input type="submit" name="submit" value="submit">
+    </timer>
+</form>
+<script>
+    function setLogTime(){
+        document.getElementById('logtime').value = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+    }
+</script>
+</body>
+</html>
